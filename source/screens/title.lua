@@ -18,10 +18,10 @@ function TitleScreen:onDisappear()
 end
 
 function TitleScreen:update()
-    gfx.clear(1)
     gfx.drawText("Press A button", 145, 100)
     if playdate.buttonJustPressed(playdate.kButtonA) then
         global.onChangeScreen(STAGE_SCREEN)
+        gfx.clear(1)
     end
 end
 
